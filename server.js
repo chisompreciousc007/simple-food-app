@@ -17,6 +17,8 @@ const foods = [
   { id: 2, description: "quesadillas" },
   { id: 3, description: "churos" },
 ];
+app.use(express.static("client/build"));
+
 app.get("/foods", (req, res) => {
   res.json(foods);
 });
